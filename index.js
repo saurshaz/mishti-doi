@@ -5,7 +5,7 @@ var express = require("express");
 var ParseServer = require("parse-server").ParseServer;
 var path = require("path");
 var bodyParser = require("body-parser");
-require('.env');
+require('./.env');
 var databaseUri = process.env.DATABASE_URI;
 
 if (!databaseUri) {
