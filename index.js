@@ -5,19 +5,7 @@ var express = require("express");
 var ParseServer = require("parse-server").ParseServer;
 var path = require("path");
 var bodyParser = require("body-parser");
-
-process.env = {
-  MASTER_KEY: "ABC123",
-  DATABASE_URI:
-    "mongodb://YYYY:XXXX@ZXZZZZZ.ssss.com:11111/ssssss",
-  SERVER_URL: "https://abstract-crud.glitch.me/parse",
-  PARSE_SERVER_LOGS_FOLDER: "/tmp",
-  APP_ID: "myAppId",
-  JAVASCRIPT_KEY: "ABC123",
-  DEFAULT_ENTITY: "employees",
-  BASE_COLLECTION: "appler"
-};
-
+require('.env');
 var databaseUri = process.env.DATABASE_URI;
 
 if (!databaseUri) {
